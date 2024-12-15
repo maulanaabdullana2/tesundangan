@@ -48,7 +48,7 @@ body{
 
 @media only screen and (max-width: 600px) {
     body {
-        overflow-x: hidden; /* Mencegah scroll horizontal */
+        overflow-x: hidden; 
     }
 
 
@@ -59,33 +59,38 @@ body{
 
     .image1{
         width: 12rem;
-        left: 35%;
+        left: 40%;
     }
 
     .image2 {
         position: absolute;
-        top: 45%;                 /* Sesuaikan posisi vertikal jika diperlukan */
-        left: 50%;                /* Memindahkan gambar ke tengah */
-        transform: translateX(-10%); /* Menjamin gambar berada di tengah secara horizontal */
-        width: 20rem;             /* Ukuran gambar */
-        padding-right: 10px;      /* Sesuaikan padding jika diperlukan */
+        top: 45%;                
+        left: 50%;                
+        transform: translateX(-17%);
+        width: 20rem;             
+        padding-right: 10px;      
     }
 
     .image3{
-        width: 16rem;
-        padding-right: 27px;
+        width: 15rem;
+        padding-right: 28px;
         margin-top: 2rem;
+    }
+
+    .image4{
+        width: 24rem;
+        left: 25px;
     }
 
     .judul1, .judul2, .judul3 {
         font-size: 20px !important;
         left: 50%;            
-        transform: translateX(-6%) translateY(-50px);  /* Pindahkan lebih tepat ke tengah */
+        transform: translateX(-20%) translateY(-50px);  
         position: absolute;        
     }
 
     .judul1 {
-        transform: translateX(-20%) translateY(-80%); /* Sesuaikan transform agar judul1 tepat di tengah */
+        transform: translateX(-20%) translateY(-80%); 
     }
 
     .judul2 {
@@ -94,6 +99,43 @@ body{
 
     .judul3 {
         font-size: 35px !important;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+
+    .image2 {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-12%);
+        width: 25rem;
+        padding-right: 20px;
+    }
+
+    .judul1, .judul2, .judul3 {
+        font-size: 22px !important;
+        left: 50%;
+        transform: translateX(-1%) translateY(-60px);
+        position: absolute;
+    }
+
+    .judul1 {
+        transform: translateX(-10%) translateY(-70%);
+    }
+
+    .judul2 {
+        font-size: 20px !important;
+    }
+
+    .judul3 {
+        font-size: 40px !important;
     }
 }
 
@@ -169,7 +211,6 @@ body{
     position: absolute;
     top: 45%;
     left: 36%;
-    z-index: 15;
 }
 
 .image3 {
@@ -185,6 +226,11 @@ body{
     bottom: -11rem;
     right: 16rem;
     z-index: 10;    
+}
+
+a {
+    position: relative;
+    z-index: 100;
 }
 
 .image5{
@@ -271,6 +317,7 @@ body{
     background-image: url(./assets/24-09-25_10-28-44-313\ 1\ \(2\).png);
     background-repeat: no-repeat;
     background-size: auto;
+    background-position: center;
 }
 
 .t{
@@ -293,12 +340,12 @@ body{
 
     .qoute .t{
         color: #000000;
-        font-size: 13px;
+        font-size: 15px;
         line-height: 19px;
     }
 
     .qoute .s{
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1px;
     }
 
@@ -312,18 +359,112 @@ body{
         margin-top: 30px;
     }
 
+    .form{
+        width:20rem;
+        height: 22rem;
+        margin: auto;
+    }
+
+    .comment .m{
+        width: 20rem;
+    }
+
+    .schedule button{
+        width: 10rem;
+        font-size: 11px;
+    }
+    
+    .qoute .tes{
+        width: 22rem;
+    }
+
+    .modals{
+        background-color: red;
+    }
+    
 }
 
-.form{
-    width:30rem;
-    height: 22rem;
+
+
+.comment h4{
+    font-size: 15px;
+    color: #2F6B98;
 }
 
-.comment{
-    width: 300rem;
+
+.komen{
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-.m{
-   margin-left: -2rem;
+
+
+.nav {
+    background-color: #F6F8FB;
+    z-index: 10;
 }
 
+
+.footbar a {
+    text-align: center;
+    font-size: 12px; 
+    color: #007bff; 
+}
+
+.icon-size {
+    width: 24px; 
+    height: 24px;
+}
+
+@media  only screen and (max-width: 600px) {
+   
+}
+
+
+
+.sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: auto; 
+   
+}
+
+.hidden {
+    transform: translateY(100%); 
+}
+
+
+
+div .attendance-hadir {
+    background-color: #D0FFE5;  
+    color: #00FF73;  
+}
+
+div .attendance-belum-pasti {
+    background-color: #3182ce;
+    color: white;  
+}
+
+div .attendance-tidak-hadir {
+    background-color: #FFEDCE;  
+    color: #FF6666; 
+}
+
+
+.attendance-hadir,
+.attendance-belum-pasti,
+.attendance-tidak-hadir {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: bold; 
+    font-size: 13px; 
+}
+
+
+.hidden {
+    display: none;
+}
